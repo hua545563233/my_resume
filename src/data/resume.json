@@ -1,0 +1,69 @@
+{
+  "basics": {
+    "name": "张三",
+    "avatar": "",
+    "title": "前端工程师",
+    "email": "zhangsan@example.com",
+    "phone": "138-0000-0000",
+    "github": "https://github.com/zhangsan",
+    "linkedin": "https://linkedin.com/in/zhangsan",
+    "summary": "热爱技术的前端工程师，X 年 Web 开发经验，专注于 Vue 生态。"
+  },
+  "experience": [
+    {
+      "company": "某上市公司",
+      "role": "高级前端工程师",
+      "startDate": "2023-01",
+      "endDate": "",
+      "current": true,
+      "description": [
+        "负责核心业务模块的前端架构设计与开发",
+        "推动团队采用 Vue 3 + TypeScript 技术栈"
+      ]
+    },
+    {
+      "company": "某科技公司",
+      "role": "前端工程师",
+      "startDate": "2020-07",
+      "endDate": "2022-12",
+      "current": false,
+      "description": [
+        "参与多个 ToB 项目的前端开发",
+        "维护内部组件库"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "某大学",
+      "major": "计算机科学与技术",
+      "degree": "本科",
+      "startDate": "2016-09",
+      "endDate": "2020-06"
+    }
+  ],
+  "skills": [
+    {
+      "category": "编程语言",
+      "items": ["JavaScript", "TypeScript", "HTML", "CSS"]
+    },
+    {
+      "category": "框架 & 库",
+      "items": ["Vue 3", "React", "Element Plus", "Tailwind CSS"]
+    },
+    {
+      "category": "工具",
+      "items": ["Git", "Vite", "Webpack", "VS Code", "Figma"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "示例项目",
+      "image": "",
+      "description": "这是一个示例项目的描述，介绍项目的主要功能和亮点。",
+      "techStack": ["Vue 3", "TypeScript", "Element Plus"],
+      "link": "https://example.com",
+      "github": "https://github.com/zhangsan/example"
+    }
+  ]
+}
