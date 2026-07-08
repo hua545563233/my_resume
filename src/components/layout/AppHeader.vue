@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import { Menu } from "@element-plus/icons-vue";
+import { useMediaQuery } from "@/composables/useMediaQuery";
 
 const route = useRoute();
 const router = useRouter();
+const isDesktop = useMediaQuery("(min-width: 768px)");
 
 const activeIndex = ref("/about");
-const drawerVisible = ref(false);
 
 const menuItems = [
   { path: "/about", label: "关于我" },
@@ -16,6 +16,10 @@ const menuItems = [
   { path: "/skills", label: "技能" },
   { path: "/projects", label: "项目作品" },
 ];
+
+const currentLabel = computed(
+  () => menuItems.find((m) => m.path === route.path)?.label || ""
+);
 
 watch(
   () => route.path,
@@ -27,7 +31,6 @@ watch(
 
 function handleSelect(path: string) {
   router.push(path);
-  drawerVisible.value = false;
 }
 </script>
 
@@ -40,12 +43,13 @@ function handleSelect(path: string) {
     >
       <span class="text-lg font-bold text-gray-800">Resume</span>
 
-      <!-- Desktop nav -->
+      <!-- Desktop nav tabs -->
       <el-menu
+        v-if="isDesktop"
         :default-active="activeIndex"
         mode="horizontal"
         :ellipsis="false"
-        class="hidden md:flex border-none! bg-transparent!"
+        class="border-none! bg-transparent!"
         @select="handleSelect"
       >
         <el-menu-item
@@ -57,27 +61,8 @@ function handleSelect(path: string) {
         </el-menu-item>
       </el-menu>
 
-      <!-- Mobile hamburger -->
-      <button class="md:hidden p-2" @click="drawerVisible = true">
-        <el-icon :size="22"><Menu /></el-icon>
-      </button>
+      <!-- Mobile: current section label -->
+      <span v-else class="text-sm text-gray-500">{{ currentLabel }}</span>
     </div>
-
-    <!-- Mobile drawer -->
-    <el-drawer v-model="drawerVisible" direction="ltr" size="70%" title="导航">
-      <el-menu
-        :default-active="activeIndex"
-        class="border-none!"
-        @select="handleSelect"
-      >
-        <el-menu-item
-          v-for="item in menuItems"
-          :key="item.path"
-          :index="item.path"
-        >
-          {{ item.label }}
-        </el-menu-item>
-      </el-menu>
-    </el-drawer>
   </header>
 </template>

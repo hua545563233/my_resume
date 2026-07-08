@@ -3,8 +3,11 @@ import { watch } from "vue";
 import { useRoute } from "vue-router";
 import AppHeader from "@/components/layout/AppHeader.vue";
 import AppFooter from "@/components/layout/AppFooter.vue";
+import MobileSwiper from "@/components/layout/MobileSwiper.vue";
+import { useMediaQuery } from "@/composables/useMediaQuery";
 
 const route = useRoute();
+const isDesktop = useMediaQuery("(min-width: 768px)");
 
 watch(
   () => route.path,
@@ -30,8 +33,9 @@ function getPageTitle(path: string): string {
   <div class="min-h-screen bg-gray-50 flex flex-col">
     <AppHeader />
     <main class="flex-1">
-      <router-view />
+      <router-view v-if="isDesktop" />
+      <MobileSwiper v-else />
     </main>
-    <AppFooter />
+    <AppFooter v-if="isDesktop" />
   </div>
 </template>
