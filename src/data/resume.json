@@ -1,19 +1,19 @@
 {
   "basics": {
-    "name": "张三",
+    "name": "刘志华",
     "avatar": "",
     "title": "前端工程师",
-    "email": "zhangsan@example.com",
-    "phone": "138-0000-0000",
-    "github": "https://github.com/zhangsan",
-    "linkedin": "https://linkedin.com/in/zhangsan",
-    "summary": "热爱技术的前端工程师，X 年 Web 开发经验，专注于 Vue 生态。"
+    "email": "545563233@qq.com",
+    "phone": "15039114042",
+    "github": "https://github.com/hua545563233",
+    "linkedin": "https://linkedin.com/in/liuzhihua",
+    "summary": "不断学习 拥抱新技术"
   },
   "experience": [
     {
-      "company": "某上市公司",
+      "company": "北京直真科股份有限公司技杭州分公司",
       "role": "高级前端工程师",
-      "startDate": "2023-01",
+      "startDate": "2020-05",
       "endDate": "",
       "current": true,
       "description": [
@@ -22,10 +22,10 @@
       ]
     },
     {
-      "company": "某科技公司",
-      "role": "前端工程师",
-      "startDate": "2020-07",
-      "endDate": "2022-12",
+      "company": "上海亿阳信通实业有限公司",
+      "role": "中级前端工程师",
+      "startDate": "2018-04",
+      "endDate": "2020-05",
       "current": false,
       "description": [
         "参与多个 ToB 项目的前端开发",
@@ -35,11 +35,11 @@
   ],
   "education": [
     {
-      "school": "某大学",
-      "major": "计算机科学与技术",
+      "school": "河南工业大学",
+      "major": "电子商务",
       "degree": "本科",
-      "startDate": "2016-09",
-      "endDate": "2020-06"
+      "startDate": "2013-09",
+      "endDate": "2017-07"
     }
   ],
   "skills": [
@@ -53,7 +53,7 @@
     },
     {
       "category": "工具",
-      "items": ["Git", "Vite", "Webpack", "VS Code", "Figma"]
+      "items": ["Git", "Vite", "Webpack", "VS Code", "TRAE"]
     }
   ],
   "projects": [
